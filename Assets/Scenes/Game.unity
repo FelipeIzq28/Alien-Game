@@ -1344,7 +1344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b9b5955ff56014aa69e0871dc6ace2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 10
   disparo: {fileID: 1876728457327783353, guid: 76aa843d45898f04994e71414c1b362f, type: 3}
   disparo2: {fileID: 1876728457327783353, guid: d4d465f00c74916459df41ffce5093ed,
     type: 3}

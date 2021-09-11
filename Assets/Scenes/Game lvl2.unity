@@ -357,7 +357,7 @@ PrefabInstance:
     - target: {fileID: 9151779691189807027, guid: 122412b4b019c24428330ce9c1c658c8,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9151779691189807028, guid: 122412b4b019c24428330ce9c1c658c8,
         type: 3}
@@ -700,7 +700,7 @@ PrefabInstance:
     - target: {fileID: 9151779691189807027, guid: ffb78f4d1f81c81469876b3f3c62fa68,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9151779691189807028, guid: ffb78f4d1f81c81469876b3f3c62fa68,
         type: 3}
@@ -1132,7 +1132,7 @@ PrefabInstance:
     - target: {fileID: 9151779691189807028, guid: 760eab81fa9c5c7439ae7726f749e750,
         type: 3}
       propertyPath: vida
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9151779691189807028, guid: 760eab81fa9c5c7439ae7726f749e750,
         type: 3}
@@ -1501,7 +1501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b9b5955ff56014aa69e0871dc6ace2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 6
   disparo: {fileID: 1876728457327783353, guid: 76aa843d45898f04994e71414c1b362f, type: 3}
   disparo2: {fileID: 1876728457327783353, guid: d4d465f00c74916459df41ffce5093ed,
     type: 3}
@@ -1930,7 +1930,7 @@ PrefabInstance:
     - target: {fileID: 9151779691189807027, guid: 760eab81fa9c5c7439ae7726f749e750,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9151779691189807028, guid: 760eab81fa9c5c7439ae7726f749e750,
         type: 3}
@@ -2132,7 +2132,7 @@ PrefabInstance:
       objectReference: {fileID: 1212068823}
     - target: {fileID: 1241522562690033, guid: 685fbe7150ceb3e4c83efc07cc1530b3, type: 3}
       propertyPath: numEnemies
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1241522562690033, guid: 685fbe7150ceb3e4c83efc07cc1530b3, type: 3}
       propertyPath: canvasButton
@@ -2560,7 +2560,7 @@ PrefabInstance:
     - target: {fileID: 9151779691189807027, guid: 122412b4b019c24428330ce9c1c658c8,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9151779691189807028, guid: 122412b4b019c24428330ce9c1c658c8,
         type: 3}
