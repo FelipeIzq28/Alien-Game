@@ -5,30 +5,40 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    bool gamePaused = false;
+  
     [SerializeField] GameObject canvas;
-    [SerializeField] GameObject nextlevel;
+    [SerializeField] GameObject canvasButton;
     [SerializeField] Spaceship player;
     [SerializeField] int numEnemies;
+
+    Animal animal;
+    bool gamePaused = false;
+    bool levelFinish = false;
+    int escena;
     // Start is called before the first frame update
     void Start()
     {
+        
         canvas.SetActive(false);
+        canvasButton.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) && levelFinish!=true)
         {
             PauseGame();
         }
+        
     }
     public void StartGame()
     {
+       
         SceneManager.LoadScene(1);
-        SceneManager.GetActiveScene();
-        Debug.Log(SceneManager.GetActiveScene());
+        escena = 1;
+
+
     }
     void PauseGame()
     {
@@ -43,20 +53,24 @@ public class GameManager : MonoBehaviour
         if (numEnemies < 1)
         {
             Ganar();
+            
         }
     }
     void Ganar()
     {
-        Time.timeScale = 0;
+        
+        canvasButton.SetActive(true);
         player.gamePaused = true;
+        levelFinish =! levelFinish;
+        Time.timeScale = 0;
     }
-    void SgteNivel()
+    public void SgteNivel(int sgt)
     {
-        SceneManager.GetActiveScene();
-        Debug.Log(SceneManager.GetActiveScene());
-        //if (SceneManager.sceneCount()==1)
-        {
 
-        }
+        Debug.Log(escena);
+        player.gamePaused = false;
+        Time.timeScale = 1;
+
+        SceneManager.LoadScene(sgt);
     }
 }

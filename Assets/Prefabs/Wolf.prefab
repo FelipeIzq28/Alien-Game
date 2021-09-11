@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9151779691189807024}
   - component: {fileID: 9151779691189807028}
   m_Layer: 8
-  m_Name: cow
+  m_Name: Wolf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3d446e59f66ea4fe193170cb8b3c8a27, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26fab33ad0bfe4048a09f31bfab1eafc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec169e27487ffbd4ea18aba61ae8384e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   vida: 0
   gm: {fileID: 0}
   movingRight: 0

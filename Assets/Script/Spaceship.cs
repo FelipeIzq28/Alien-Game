@@ -8,12 +8,18 @@ public class Spaceship : MonoBehaviour
     [SerializeField] GameObject disparo;
     [SerializeField] GameObject disparo2;
     [SerializeField] float fireRate;
+
+    public Animal animal;
+
+    float tiempoPoder;
     bool disp=true;
     float minX, maxX, minY, maxY;
-    float contador=0;
+    float contadorDisp  = 0;
+    float contadorPoder = 0;
     float nextFire = 0;
 
     public bool gamePaused = false;
+    public bool tiempoLento = false;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +57,8 @@ public class Spaceship : MonoBehaviour
             {
                 disp = !disp;
             }
+        
+          
         }
         
        
@@ -63,12 +71,14 @@ public class Spaceship : MonoBehaviour
         float direcH = Input.GetAxis("Horizontal");
         float direcV = Input.GetAxis("Vertical");
 
-        Vector2 movimiento = new Vector2(direcH * Time.deltaTime * speed, direcV * Time.deltaTime * speed);
+        Vector2 movimiento = new Vector2(direcH * Time.unscaledDeltaTime * speed, direcV * Time.unscaledDeltaTime * speed);
         transform.Translate(movimiento);
+       
 
         if (transform.position.x > maxX)
         {
             transform.position = new Vector2(maxX, transform.position.y);
+            
         }
         if (transform.position.x < minX)
         {
@@ -88,28 +98,30 @@ public class Spaceship : MonoBehaviour
     }
     void Disparar1()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && Time.time >= nextFire)
+        if (Input.GetKeyDown(KeyCode.Space) && Time.unscaledTime >= nextFire)
         {
             Instantiate(disparo, transform.position - new Vector3(0,1,0), transform.rotation);
-            nextFire = Time.time + fireRate;
+            nextFire = Time.unscaledTime + fireRate;
         }
     }
     void Disparar2()
     {
         
-        if (Input.GetKey(KeyCode.Space) && Time.time >= nextFire && contador <5)
+        if (Input.GetKey(KeyCode.Space) && Time.unscaledTime >= nextFire && contadorDisp <5)
         {
             Instantiate(disparo2, transform.position - new Vector3(0, 1, 0), transform.rotation);
-            contador++;
-            Debug.Log(contador);
-            if(contador == 5)
+            contadorDisp++;
+            Debug.Log(contadorDisp);
+            if(contadorDisp == 5)
             {
                 nextFire = Time.time + fireRate;
-                contador = 0;
+                contadorDisp = 0;
             }
             
         }
         
     }
+    
+    
 
 }
