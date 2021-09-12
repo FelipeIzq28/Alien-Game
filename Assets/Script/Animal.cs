@@ -82,7 +82,7 @@ public class Animal : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X) && Time.unscaledTime >= duracion && poder == false)
         {
             poder = true;
-            Time.timeScale = 0.2f;
+            Time.timeScale = 0.5f;
             duracion = Time.unscaledTime + powerRate;
             contPoderNum++;
             if(contPoderNum > 3)
